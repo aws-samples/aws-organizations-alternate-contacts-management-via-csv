@@ -53,18 +53,11 @@ if [ -z "$source_file" -a -z "$output_file" ]; then
 	usage
 fi
 
-#if [ ! -z "${source_file}" -a ! -f "${source_file}" ]; then
-#	echo "File \"$source_file\" does not exist...exit" 
-#	exit 1
-#fi
-
 management_account=`aws organizations describe-organization --query Organization.MasterAccountId --output text` 2>&1 1>$0.log
 if [ $? -ne "0" ]; then
 	echo "Error in fetching master account id"
 	exit 1
 fi
-#echo "Management account is \"$management_account\""
-	
  
 if [ ! -z "$output_file" ]; then
 	output_file="$PWD/$output_file"
