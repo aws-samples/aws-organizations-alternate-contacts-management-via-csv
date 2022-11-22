@@ -23,7 +23,7 @@ source_file=""
 max_retry=4
 exit_code=0
 loaded=0
-skippe=0
+skipped=0
 
 usage() 
 { 
