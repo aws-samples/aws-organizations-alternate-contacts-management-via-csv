@@ -16,9 +16,10 @@ The script leverages on AWS CLI 2.0 and AWS CloudShell to enable the AWS Organiz
 
 ## Things to know 
 
-1. Each account/contact type in the CSV file has to provide all the corresponding alternate contacts details, in case any of them will be missed that entry will be skipped. 
-2. We recommend to limit the CSV file to only those rows that need to be updated. 
-3. When you export it, feel free to create a copy for backup
+1. Each account/contact type in the CSV file has to provide all the corresponding alternate contacts details: Name, email, Title, Phone Number. In case any of them is, the corresponding entry will be skipped. 
+2. When modifying the file with spredsheet tools, the accounts id and phone number might be formatted as exponentional formula, e.g., 123456789 as 1.23+E8, while a number is needed: here format the entire column as "Number" without decimal and 1000 separator.
+3. We recommend to limit the CSV file to only those rows that need to be updated. 
+4. When you export the alternate contacts, feel free to create a copy for backup. Such a copy can be used to either roll-back or to compare against the file that will be imported, double checking the changes.
 
 ## Usage
 
