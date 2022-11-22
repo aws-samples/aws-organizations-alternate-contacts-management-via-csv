@@ -14,7 +14,7 @@ This work has been inspired by the blog post [Programmatically managing alternat
 ## Overview
 
 The script leverages on AWS CLI 2.0 and AWS CloudShell to enable the AWS Organizations management account to easily export all the linked accounts alternate contacts to a regular CSV file. Then, the file can be integrated or updated, and uploaded again. 
-**The CSV format has to be kept to make it works properly**: account ids has to be formatted as a plain number without demical or 1000 separator, same for phone number, avoid additional comma like in the name or tile, and pay attention to special characters.
+**The CSV format has to be kept to make it works properly**: account ids has to be formatted as a plain number without decimal or 1000 separator, same for phone number, avoid additional comma like in the name or tile, and pay attention to special characters.
 
 ## Things to know
 
