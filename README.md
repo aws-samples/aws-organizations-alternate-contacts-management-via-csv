@@ -32,13 +32,16 @@ The script leverages on AWS CLI 2.0 and AWS CloudShell to enable the AWS Organiz
 
 ![image](https://user-images.githubusercontent.com/4224797/203337896-14b70fc1-0c51-4165-8c89-e6ad889639df.png)
 
-- Run the script to export the alternate contacts on a CSV file, as follow
+- Make the script exectuable 
 ```bash
 $ chmod +x alternate-contacts-to-from-csv.sh
+```
+
+- Run the script to export the alternate contacts on a CSV file, as follow
+```bash
 $ ./alternate-contacts-to-from-csv.sh -o aws-alternate-contacts.csv
 ```
 ![image](https://user-images.githubusercontent.com/4224797/203345967-10096e9a-b28f-4038-9522-c2f8613bb52c.png)
-
 
 - From AWS CloudShell you can download the resulting CSV file: **keep a copy as a backup**. 
 ![image](https://user-images.githubusercontent.com/4224797/203339756-8c08e3b6-8fe3-4cb5-949d-719799e90d3d.png)
