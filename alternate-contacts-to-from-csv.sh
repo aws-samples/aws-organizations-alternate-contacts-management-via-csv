@@ -110,10 +110,12 @@ else
 		echo -n "Working on account \"$account_id\": "
 		if ! [[ $account_id =~ $number ]] ; then
 			echo  "Skipping invalid account id."
+			((skipped++))
 			continue
 		fi
 		if [ "$management_account" -eq "$account_id" ]; then
 			echo "This is the management account and will be skipped."
+			((skipped++))
 			continue
 		fi
 		if [ -z "$account_email" -o -z "$account_name" -o -z "$account_phone" -o -z "$account_title" ]; then
@@ -127,7 +129,7 @@ else
 		while [ $counter -lt $max_retry ]
 		do
 			# Name, phone, email, and title must be provided for BILLING, OPERATIONS, SECURITY
-			account_id=$(printf "%012d" $account_id)
+			# account_id=$(printf "%012d" $account_id)
 			aws account put-alternate-contact --account-id ${account_id} --alternate-contact-type ${type} --email-address ${account_email} --name ${account_name} --phone-number ${account_phone} --title ${account_title}
 			exit_code=$?
       			if [ $exit_code -ne "0" ]; then

@@ -34,7 +34,8 @@ The script leverages on AWS CLI 2.0 and AWS CloudShell to enable the AWS Organiz
 
 - Run the script to export the alternate contacts on a CSV file, as follow
 ```bash
-$ alternate-contacts-to-from-csv.sh -o aws-alternate-contacts.csv
+$ chmod +x alternate-contacts-to-from-csv.sh
+$ ./alternate-contacts-to-from-csv.sh -o aws-alternate-contacts.csv
 ```
 ![image](https://user-images.githubusercontent.com/4224797/203345967-10096e9a-b28f-4038-9522-c2f8613bb52c.png)
 
@@ -43,15 +44,22 @@ $ alternate-contacts-to-from-csv.sh -o aws-alternate-contacts.csv
 ![image](https://user-images.githubusercontent.com/4224797/203339756-8c08e3b6-8fe3-4cb5-949d-719799e90d3d.png)
 
 - Review and integrate the CSV file: each account entry has to report all the corresponding alternate contacts details, otherwise it will not be imported. 
+
+- File has to end with a new line empty
+
 - We recommend to limit the CSV file to only those rows that need to be updated
 
 - (Optional) Review the differences between the original CSV and the one to import, being sure about the changes made
 
+- Rename the downloaded file in CloudShell, to avoid error during the upload of the updated version
+
 - Finally, upload the CSV file into AWS CloudShell and run the import command, as follow
 ```bash
-$ alternate-contacts-to-from-csv.sh -i aws-alternate-contacts.csv
+$ ./alternate-contacts-to-from-csv.sh -i aws-alternate-contacts.csv
 ```
 ![image](https://user-images.githubusercontent.com/4224797/203340677-170d7a6c-dd0e-49c8-8d88-b7bb3ca127b9.png)
+
+- Attention: the uploaded file will be avaiable in the home folder and it should be moved to the right folder
 
 - Check the alternate contacts in the AWS Organizations.
 
