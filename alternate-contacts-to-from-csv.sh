@@ -149,5 +149,5 @@ else
 			exit 1
 		fi
 	done < $source_file
-	echo "Contacts loaded:$loaded, skipped:$skipped ."
+	echo "Contacts loaded:$loaded, skipped:$skipped"
 fi
