@@ -43,6 +43,12 @@ $ ./alternate-contacts-to-from-csv.sh -o aws-alternate-contacts.csv
 ```
 ![image](https://user-images.githubusercontent.com/4224797/203345967-10096e9a-b28f-4038-9522-c2f8613bb52c.png)
 
+The resulting CSV file should follow this format:
+```
+account_id,ALTERNATECONTACT,contact_type,Email address,Full name,Phone number,Title
+```
+where _contact_type_ might be OPERATIONS or SECURITY or BILLING.
+
 - From AWS CloudShell you can download the resulting CSV file: **keep a copy as a backup**. 
 ![image](https://user-images.githubusercontent.com/4224797/203339756-8c08e3b6-8fe3-4cb5-949d-719799e90d3d.png)
 
