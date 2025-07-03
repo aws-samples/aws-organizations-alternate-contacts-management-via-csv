@@ -107,6 +107,7 @@ else
 	IFS=','
         while read -r account_id other type account_email account_name account_phone account_title; do
 		number='^[0-9]+$'
+  		account_id=$(printf "%012s" "$account_id" | tr ' ' '0')
 		echo -n "Working on account \"$account_id\": "
 		if ! [[ $account_id =~ $number ]] ; then
 			echo  "Skipping invalid account id."
